@@ -131,7 +131,7 @@
 
   .hero h1{
     font-family: 'Baloo 2', sans-serif;
-    font-weight: 800;
+    font-weight: 500;
     font-size: clamp(2.6rem, 10vw, 6rem);
     line-height: 1.05;
     background: linear-gradient(90deg, var(--c2), var(--c6), var(--gold), var(--c4), var(--c3), var(--c5));
@@ -141,10 +141,10 @@
     background-clip: text;
     color: transparent;
     text-shadow:
-      -3px -3px 0 rgba(255,255,255,0.9),
-      3px -3px 0 rgba(255,255,255,0.9),
-      -3px 3px 0 rgba(255,255,255,0.9),
-      3px 3px 0 rgba(255,255,255,0.9),
+      -1px -1px 0 rgba(255,255,255,0.9),
+      1px -1px 0 rgba(255,255,255,0.9),
+      -1px 1px 0 rgba(255,255,255,0.9),
+      1px 1px 0 rgba(255,255,255,0.9),
       0 10px 24px rgba(58,22,113,0.35);
   }
 
@@ -193,8 +193,16 @@
     position: absolute;
     inset: 0;
     overflow: hidden;
-    z-index: 0;
+    z-index: -1;
     pointer-events: none;
+  }
+
+  .hero .eyebrow,
+  .hero h1,
+  .hero p.sub,
+  .hero .scroll-cue{
+    position: relative;
+    z-index: 1;
   }
 
   .balloon{
